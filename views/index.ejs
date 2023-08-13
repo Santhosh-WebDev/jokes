@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>JOKES GENERATOR</title>
+        <link rel="stylesheet" href="/style.css" />
+    </head>
+    <body>
+        <div class="grid">
+            <div class="settings">
+              <form action="/" id="form" class="form" method="POST">
+                <label id="one">
+                    Category:
+                    <select name="category">
+                        <option value="Any">Any</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Miscellaneous">Misc</option>
+                        <option value="Dark">Dark</option>
+                        <option value="Pun">Pun</option>
+                        <option value="Spooky">Spooky</option>
+                        <option value="Christmas">Christmas</option>
+                    </select>
+                </label>
+                <label id="two">
+                    Black list flags:
+                    <select name="blflags">
+                        <option value="">None</option>
+                        <option value="nsfw">nsfw</option>
+                        <option value="religious">religious</option>
+                        <option value="racist">racist</option>
+                        <option value="political">political</option>
+                        <option value="sexist">sexist</option>
+                        <option value="explicit">explicit</option>
+                        
+                    </select>
+                </label>
+                <label id="three">
+                    type of joke:
+                    <select name="type">
+                        <option value="single">single</option>
+                        <option value="twopart">twopart</option>
+                    </select>
+                </label>
+                <div class="inp">
+                    <label for="text">Search String: </label>
+                    <input type="text" id="uname" name="contain" />
+                </div>
+                <button id="five" type="submit" >Submit</button>
+              </form>
+            </div>
+            <div class="joke">
+                <%if(locals.content){%>
+                <h4>
+                    <%= content%>
+                </h4>
+                <%}else{%>
+                    <h4>LETS START</h4>
+                <%}%>
+            </div>
+        </div>
+        
+    </body>
+</html>
